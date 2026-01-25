@@ -1,0 +1,80 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: bisque;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.main-container{
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    min-width: 200px;
+}
+
+.main-container h3{
+    text-align: center;
+}
+
+.mainApp{
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    min-width: auto;
+}
+
+#myNumber{
+    background-color: orange;
+    width: 100%;
+    text-align: center;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+    padding: 10px;
+    font-size: 1.5rem;
+}
+
+button{
+    margin: 5px;
+    padding: 5px;
+    border: none;
+    border-radius: 8px;
+    color: #fff;
+    width: 100%;
+}
+
+button:hover{
+    cursor: pointer;
+    box-shadow: 1px 2px 4px gray;
+}
+
+.warningMsg{
+    background-color: rgb(242, 96, 96);
+    text-align: center;
+}
+
+#incmtBtn{
+    background-color: rgb(36, 163, 121);
+}
+
+#decBtn{
+    background-color: rgb(79, 110, 111);
+}
+
+#resBtn{
+    background-color: rgb(235, 94, 94);
+}
+
+.textRed{
+    color: red;
+}
+
+.textGreen{
+    color: green;
+}
