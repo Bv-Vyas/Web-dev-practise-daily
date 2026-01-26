@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Number Guessing Game</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="contanier">
+      <h3 id="gameMsg"></h3>
+      <p id="warnMsg"></p>
+      <h4>Guess Number</h4>
+      <div class="controls">
+        <button id="resetBtn">reset</button>
+        <span id="attemptLeft"></span>
+      </div>
+      <div class="mainApp">
+        <input
+          id="inputBox"
+          type="number"
+          onfocus="this.value = ''"
+          value="0"
+        />
+        <p>Guess : <span class="inputMsg"></span></p>
+        <button id="guessBtn">Guess</button>
+      </div>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>

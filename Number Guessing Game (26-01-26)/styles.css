@@ -1,0 +1,92 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background-color:black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.contanier{
+    background-color: antiquewhite;
+    padding: 2rem;
+    border-radius: 10px;
+    width: 200px;
+}
+
+.contanier h4{
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.controls{
+    display: flex;
+    justify-content: space-between;
+}
+
+#resetBtn{
+    background-color: rgb(241, 241, 130);
+    padding: 5px;
+    border-radius: 8px;
+    border: 1px solid gray;
+    cursor: pointer;
+}
+
+#attemptLeft{
+    background-color: rgb(63, 110, 151);
+    width: 20px;
+    text-align: center;
+    border-radius: 50%;
+    border: 1px solid green;
+    color: #fff;
+}
+
+.mainApp{
+    background-color: rgb(13, 99, 99, 0.6);
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    min-height: 150px;
+    margin-top: 1rem;
+    border-radius: 10px;
+}
+
+#inputBox{
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    text-align: center;
+}
+
+#guessBtn{
+    width: 100%;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid gray;
+    background-color: rgb(177, 12, 177, 0.8);
+    color: #fff;
+    font-size: 1rem;
+}
+
+#warnMsg{
+    text-align: center;
+}
+
+.won{
+    background-color: aquamarine;
+}
+
+#gameMsg{
+    text-align: center;
+    color: yellow;
+}
+
+.Over{
+    background-color: red;
+}
