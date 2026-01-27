@@ -1,4 +1,4 @@
-let tasks = [];
+let tasks = []; // Array for state management
 
 let addBtn = document.querySelector(".inputBox-container button");
 let inputBox = document.querySelector(".inputBox-container input");
