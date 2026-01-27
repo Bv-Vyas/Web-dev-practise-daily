@@ -1,0 +1,96 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: azure;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.todoApp{
+    min-width: 600px;
+    background-color: antiquewhite;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    border-radius: 10px;
+    height: 80ch;
+}
+
+.inputBox-container{
+    min-width: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0 20px;
+
+}
+
+.inputBox-container .inputBox{
+    width: 80%;
+    padding: 5px;
+    border: 1px solid gray;
+    border-radius:  10px;
+}
+
+.inputBox-container .inputBox:hover{
+    box-shadow: 1px 2px 4px gray;
+}
+
+.inputBox-container .addBtn{
+    background-color: rgb(40, 178, 97);
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    width: 50px;
+    margin-left: 5px;
+    cursor: pointer;
+}
+.inputBox-container .addBtn:hover{
+    background-color: rgb(21, 135, 69);
+    box-shadow: 1px 2px 4px gray;
+}
+
+.tasksList{
+    background-color: rgba(6, 6, 6, 0.6);
+    min-width: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+}
+
+.tasksCount{
+    width: 400px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.unorderdList{
+    min-width: 400px;
+}
+
+.unorderdList .myTask{
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    margin: 20px;
+}
+
+.deleteTaskBtn{
+    background-color: rgb(232, 73, 73);
+    width: 50px;
+    border: none;
+    padding: 5px;
+    border-radius: 8px;
+    color: #fff;
+}
