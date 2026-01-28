@@ -1,0 +1,52 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: #fff(2, 2, 2, 0.846);
+    padding: 20px;
+}
+
+.userInputSection{
+    margin-bottom: 2rem;
+}
+
+form button{
+    background-color: rgb(71, 228, 176);
+    border: none;
+    padding: 5px;
+    border-radius: 6px;
+    width: 50px;
+    color: purple;
+    font-size: large;
+}
+
+form input{
+    padding: 5px;
+    border-radius: 6px;
+}
+
+form select{
+    padding: 5px;
+     border-radius: 6px;
+}
+
+table th{
+    padding: 5px;
+    margin-right: 20px;
+}
+
+table td{
+    padding: 5px;
+    margin-right: 20px;
+}
+
+.dltBtn{
+    background-color: rgb(241, 74, 74);
+    border: none;
+    padding: 5px;
+    border-radius: 6px;
+    width: 50px;
+    font-size: large;
+}
