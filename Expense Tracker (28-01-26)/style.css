@@ -50,3 +50,13 @@ table td{
     width: 50px;
     font-size: large;
 }
+
+#showAllBtn{
+    background-color: rgb(71, 228, 176);
+    border: none;
+    padding: 5px;
+    border-radius: 6px;
+    width: 50px;
+    color: purple;
+    font-size: large;
+}

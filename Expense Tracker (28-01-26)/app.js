@@ -1,16 +1,16 @@
 let expenses = [];
 
 const form = document.querySelector("form");
+const filterForm = document.querySelector("#filterForm");
 const tblBody = document.querySelector("table #tableBody");
 const totalExpense = document.querySelector("#totalExpense");
-
-console.log(totalExpense);
+const showAllBtn = document.querySelector("#showAllBtn");
 
 form.addEventListener("submit", (evt) => {
   evt.preventDefault();
   const title = evt.target.title.value.trim();
   const amount = Number(evt.target.amount.value);
-  const category = evt.target.category.value;
+  const category = evt.target.category.value.toLowerCase();
 
   if (!title || amount <= 0 || !category) {
     console.log("Please Enter valid data");
@@ -24,15 +24,15 @@ const setData = (title, amount, category) => {
   let newData = {
     id: `${Date.now()}`,
     title: `${title}`,
-    amount: `${amount}`,
+    amount: amount,
     category: `${category}`,
   };
 
   expenses.push(newData);
-  renderUI();
+  renderUI(expenses);
 };
 
-const renderUI = () => {
+const renderUI = (expenses) => {
   tblBody.innerHTML = "";
   for (expense of expenses) {
     let newExpense = document.createElement("tr");
@@ -40,25 +40,21 @@ const renderUI = () => {
     let colTwoData = document.createElement("td");
     let colThirdData = document.createElement("td");
     let deletBtn = document.createElement("button");
-    console.log(expense.id);
+
     newExpense.setAttribute("id", `${expense.id}`);
     colOneData.innerText = `${expense.category}`;
     colTwoData.innerText = `${expense.title}`;
-    colThirdData.innerText = `${expense.amount}`;
+    colThirdData.innerText = expense.amount;
     deletBtn.innerText = "dlt";
     deletBtn.classList.add("dltBtn");
 
     newExpense.append(colOneData, colTwoData, colThirdData, deletBtn);
 
-    tableBody.append(newExpense);
-
-    const total = getTotalExpenses();
-    totalExpense.innerText = `Total Expense = ${total}`;
+    tblBody.append(newExpense);
   }
+  const total = getTotalExpenses(expenses);
+  totalExpense.innerText = `Total Expense = ${total}`;
 };
-
-const dltbtn = document.querySelector("table .dltBtn");
-console.log(dltbtn);
 
 tblBody.addEventListener("click", (evt) => {
   if (!evt.target.classList.contains("dltBtn")) {
@@ -71,18 +67,39 @@ tblBody.addEventListener("click", (evt) => {
 
 const hanleDeleteExpense = (expenseId) => {
   const expID = expenses.findIndex((item) => item.id === expenseId);
-  console.log(expID);
+
   if (expID >= 0) {
     expenses.splice(expID, 1);
 
-    renderUI();
+    renderUI(expenses);
   }
 };
 
-const getTotalExpenses = () => {
+const getTotalExpenses = (list) => {
   let total = 0;
-  for (expense of expenses) {
-    total += Number(expense.amount);
+  for (expense of list) {
+    total += expense.amount;
   }
   return total;
 };
+
+filterForm.addEventListener("submit", (evt) => {
+  evt.preventDefault();
+  const filter = evt.target.categoryFilter.value.toLowerCase();
+  if (filter === "") {
+    console.log("No filter Added !!");
+  } else {
+    filterExpenses(filter);
+  }
+});
+
+const filterExpenses = (filter) => {
+  const filterExpenses = expenses.filter(
+    (expense) => expense.category === filter,
+  );
+  renderUI(filterExpenses);
+};
+
+showAllBtn.addEventListener("click", () => {
+  renderUI(expenses);
+});
