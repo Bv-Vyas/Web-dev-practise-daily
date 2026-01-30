@@ -20,6 +20,7 @@ form button{
     width: 50px;
     color: purple;
     font-size: large;
+    cursor: pointer;
 }
 
 form input{
@@ -49,6 +50,7 @@ table td{
     border-radius: 6px;
     width: 50px;
     font-size: large;
+    cursor: pointer;
 }
 
 #showAllBtn{
@@ -57,6 +59,8 @@ table td{
     padding: 5px;
     border-radius: 6px;
     width: 50px;
-    color: purple;
+    color: black;
     font-size: large;
+    margin: 2px;
+    cursor: pointer;
 }
